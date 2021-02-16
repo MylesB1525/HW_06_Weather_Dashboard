@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="./assets/style.css" />
+  <title>Weather Dashboard</title>
+</head>
+
+<body>
+  <header class=jumbotron>
+    <h1 class="display-3">Weather Dashboard</h1>
+  </header>
+    <div class="container"> 
+      <div class="row">
+        <div class="col-4 bg-light">
+          <nav class="navbar navbar-light bg-light">
+            <form class="form-inline">
+            Search for a City:
+            <input id="inputBar" class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+            <button id="searchButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </nav>
+        </div>
+      <div class="col-8">
+        <div class="row mr-0">
+          <div class="col-12 border border-dark m-3 rounded">
+          <div class="row">
+          <div class="col-12">
+          <span id="city-name"></span>
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="wind-speed"></p>
+            <p id="UV-index"></p>
+          </span>
+          </div>
+          </div>
+          </div>
+      </div>
+        <div class="col-8">
+        <div class="row mr-0">
+        <div class="col-12 border border-none m-3 rounded">
+        <div class="row">
+          <class class="col-12">                
+            <h3>5-Day Forecast:</h3>
+          </class>   
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>  
+  <script src="script.js" ></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+  
+.jumbotron{
+  background-color: rgb(47, 46, 56);
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+#city-name{
+  font-size: 40px;
+}
