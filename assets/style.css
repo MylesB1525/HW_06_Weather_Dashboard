@@ -1,9 +1,10 @@
   
 .jumbotron{
-  background-color: rgb(47, 46, 56);
+  background-color: #343a40;
   text-align: center;
   font-weight: bold;
-  color: white;
+  color: #117a8b;
+  font-family: 'Biome', 'Trebuchet MS', 'Arial', 'sans-serif'
 }
 
 #city-name{
