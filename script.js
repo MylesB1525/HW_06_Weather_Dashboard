@@ -1,3 +1,4 @@
+// Variable calls
 var input = document.getElementById("city-input");
 var city = document.getElementById("city-name");
 var search = document.getElementById("search-button");
@@ -44,7 +45,8 @@ $(document).ready(function () {
     });
   }
 
-  function returnWeatherForecast(cityName) {
+  // Forecast funtion (Need to fix Forcast, Icons, Local Storage)
+  function getForecast(cityName) {
     let queryURL =
       "api.openweathermap.org/data/2.5/forecast?id=" +
       cityName +
@@ -62,19 +64,19 @@ $(document).ready(function () {
         let weatherIcon = `https://openweathermap.org/img/wn/${forecastInfo[i].weather[0].icon}.png`;
 
         forecastDiv.append(`
-              <div class="col-md">
-                <div class="card text-white bg-primary">
-                  <div class="card-body">
-                    <h4>${
-                      forecastDate.getMonth() + 1
-                    }/${forecastDate.getDate()}/${forecastDate.getFullYear()}</h4>
-                    <img src=${weatherIcon} alt="Icon">
-                      <p>Temp: ${forecastInfo[i].main.temp} &#176;C</p>
-                      <p>Humidity: ${forecastInfo[i].main.humidity}%</p>
-                  </div>
-                </div>
+          <div class="col-md">
+            <div class="card text-white bg-primary">
+              <div class="card-body">
+                <h4>${
+                  forecastDate.getMonth() + 1
+                }/${forecastDate.getDate()}/${forecastDate.getFullYear()}</h4>
+                  <img src=${weatherIcon} alt="Icon">
+                    <p>Temp: ${forecastInfo[i].main.temp} &#176;C</p>
+                    <p>Humidity: ${forecastInfo[i].main.humidity}%</p>
               </div>
-              `);
+            </div>
+          </div>
+        `);
       });
     });
   }
@@ -84,7 +86,7 @@ $(document).ready(function () {
     .addEventListener("click", function (event) {
       event.preventDefault();
       var city = document.querySelector("#inputBar").value.trim();
-      console.log(city);
       getWeather(city);
+      getForecast(city);
     });
 });
